@@ -1,0 +1,1089 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RusLex — Privacy Policy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafbfc;
+            --card: #ffffff;
+            --text: #1a1a2e;
+            --text-secondary: #555770;
+            --accent: #1565c0;
+            --accent-light: #e3f2fd;
+            --border: #e8eaed;
+            --section-bg: #f8f9fb;
+            --warning: #e65100;
+            --warning-bg: #fff3e0;
+            --radius: 10px;
+        }
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+            line-height: 1.75;
+            color: var(--text);
+            background: var(--bg);
+            padding: 0;
+        }
+
+        .hero {
+            background: linear-gradient(135deg, #0d47a1 0%, #1565c0 50%, #1976d2 100%);
+            color: white;
+            padding: 48px 24px 40px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.02em;
+        }
+        .hero .subtitle {
+            font-size: 0.95rem;
+            opacity: 0.85;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+        .hero .effective {
+            display: inline-block;
+            margin-top: 16px;
+            background: rgba(255,255,255,0.15);
+            padding: 6px 18px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 32px 20px 64px;
+        }
+
+        /* Language Navigation */
+        .lang-nav {
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .lang-btn {
+            padding: 10px 24px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: var(--card);
+            color: var(--text);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .lang-btn:hover { border-color: var(--accent); color: var(--accent); }
+        .lang-btn.active {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+
+        /* Sections */
+        .lang-content { display: none; }
+        .lang-content.active { display: block; }
+
+        .policy-card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px 28px 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+        }
+
+        .policy-card h2 {
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .policy-card h2 .icon {
+            display: inline-flex;
+            width: 32px;
+            height: 32px;
+            background: var(--accent-light);
+            border-radius: 8px;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .policy-card p, .policy-card li {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+        }
+        .policy-card ul {
+            padding-left: 20px;
+            margin: 10px 0;
+        }
+        .policy-card li { margin-bottom: 6px; }
+
+        .policy-card strong { color: var(--text); }
+
+        /* RTL-specific */
+        .rtl { direction: rtl; text-align: right; font-family: 'IBM Plex Sans Arabic', 'IBM Plex Sans', sans-serif; }
+        .rtl .policy-card ul { padding-right: 20px; padding-left: 0; }
+        .rtl .policy-card h2 { flex-direction: row-reverse; }
+
+        /* Data Table */
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0;
+            font-size: 0.88rem;
+        }
+        .data-table th, .data-table td {
+            padding: 10px 14px;
+            border: 1px solid var(--border);
+            text-align: left;
+        }
+        .rtl .data-table th, .rtl .data-table td { text-align: right; }
+        .data-table th {
+            background: var(--section-bg);
+            font-weight: 600;
+            color: var(--text);
+            font-size: 0.85rem;
+        }
+        .data-table td { color: var(--text-secondary); }
+
+        /* Warning / Important */
+        .notice {
+            background: var(--warning-bg);
+            border-left: 4px solid var(--warning);
+            padding: 14px 18px;
+            border-radius: 0 8px 8px 0;
+            margin: 14px 0;
+            font-size: 0.88rem;
+            color: #bf360c;
+        }
+        .rtl .notice {
+            border-left: none;
+            border-right: 4px solid var(--warning);
+            border-radius: 8px 0 0 8px;
+        }
+
+        /* Contact card */
+        .contact-box {
+            background: var(--accent-light);
+            border-radius: var(--radius);
+            padding: 18px 22px;
+            margin-top: 12px;
+        }
+        .contact-box a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .contact-box a:hover { text-decoration: underline; }
+
+        /* TOC */
+        .toc {
+            background: var(--section-bg);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 20px 24px;
+            margin-bottom: 24px;
+        }
+        .toc h3 {
+            font-size: 0.95rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text);
+        }
+        .toc ol {
+            padding-left: 20px;
+            margin: 0;
+        }
+        .rtl .toc ol { padding-right: 20px; padding-left: 0; }
+        .toc li {
+            font-size: 0.88rem;
+            color: var(--accent);
+            margin-bottom: 4px;
+            cursor: pointer;
+        }
+        .toc li:hover { text-decoration: underline; }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 32px 20px;
+            font-size: 0.82rem;
+            color: var(--text-secondary);
+            border-top: 1px solid var(--border);
+            margin-top: 40px;
+        }
+
+        @media (max-width: 600px) {
+            .policy-card { padding: 20px 18px 18px; }
+            .container { padding: 24px 14px 48px; }
+            .hero { padding: 36px 16px 32px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1>RusLex — Privacy Policy</h1>
+    <p class="subtitle">Russian Language Learning App</p>
+    <span class="effective">Effective Date: February 22, 2026</span>
+</header>
+
+<div class="container">
+
+    <nav class="lang-nav">
+        <button class="lang-btn active" onclick="switchLang('en')">English</button>
+        <button class="lang-btn" onclick="switchLang('ar')">العربية</button>
+        <button class="lang-btn" onclick="switchLang('ru')">Русский</button>
+    </nav>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                      ENGLISH VERSION                       -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="lang-en" class="lang-content active">
+
+        <div class="toc">
+            <h3>Table of Contents</h3>
+            <ol>
+                <li>Developer Information</li>
+                <li>Data We Collect &amp; How We Use It</li>
+                <li>Third-Party Services &amp; SDKs</li>
+                <li>App Permissions &amp; Justification</li>
+                <li>Data Storage &amp; Security</li>
+                <li>Data Retention &amp; Deletion</li>
+                <li>AI-Generated Content Disclaimer</li>
+                <li>Data Sources</li>
+                <li>Children's Privacy</li>
+                <li>Your Rights</li>
+                <li>International Users (GDPR / CCPA)</li>
+                <li>Changes to This Policy</li>
+                <li>Contact Us</li>
+            </ol>
+        </div>
+
+        <!-- 1. Developer Info -->
+        <div class="policy-card">
+            <h2><span class="icon">👤</span> 1. Developer Information</h2>
+            <p><strong>App Name:</strong> RusLex — Russian Language Trainer</p>
+            <p><strong>Developer:</strong> Hayder</p>
+            <p><strong>Contact Email:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+            <p><strong>Platform:</strong> Android (Google Play Store)</p>
+            <p><strong>App Package:</strong> com.hayder.aiassistant.russianpronunciationtrainer</p>
+        </div>
+
+        <!-- 2. Data Collection -->
+        <div class="policy-card">
+            <h2><span class="icon">📊</span> 2. Data We Collect &amp; How We Use It</h2>
+            <p>RusLex is designed with privacy in mind. We minimize data collection to only what is necessary for the app to function.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Data Type</th>
+                        <th>Collected?</th>
+                        <th>Shared?</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Personal Information (name, email, phone)</td>
+                        <td><strong>No</strong></td>
+                        <td><strong>No</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Location Data</td>
+                        <td><strong>No</strong></td>
+                        <td><strong>No</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Audio / Voice Data</td>
+                        <td>Processed on-device only</td>
+                        <td><strong>No</strong></td>
+                        <td>Speech recognition for pronunciation practice</td>
+                    </tr>
+                    <tr>
+                        <td>Learning Progress (SRS data)</td>
+                        <td>Stored locally on device</td>
+                        <td><strong>No</strong></td>
+                        <td>Spaced Repetition System for vocabulary review</td>
+                    </tr>
+                    <tr>
+                        <td>Advertising ID</td>
+                        <td>By Google AdMob SDK</td>
+                        <td>With Google</td>
+                        <td>Serving relevant advertisements</td>
+                    </tr>
+                    <tr>
+                        <td>Device & App Interactions</td>
+                        <td>By Google AdMob SDK</td>
+                        <td>With Google</td>
+                        <td>Ad performance, analytics, and fraud prevention</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notice">
+                <strong>Important:</strong> RusLex does not create user accounts. No registration, login, or personal identification is required to use the app. All learning data remains exclusively on your device.
+            </div>
+        </div>
+
+        <!-- 3. Third-Party SDKs -->
+        <div class="policy-card">
+            <h2><span class="icon">🔗</span> 3. Third-Party Services &amp; SDKs</h2>
+            <p>RusLex integrates the following third-party services. Each may collect data according to their own privacy policies:</p>
+
+            <p><strong>a) Google AdMob (Advertising)</strong></p>
+            <p>We use Google AdMob to display optional rewarded advertisements. AdMob may collect:</p>
+            <ul>
+                <li>Advertising ID (device identifier for ad personalization)</li>
+                <li>IP address (approximate location for ad targeting)</li>
+                <li>Device information (model, OS version, screen size)</li>
+                <li>Ad interaction data (impressions, clicks)</li>
+            </ul>
+            <p>AdMob's data practices are governed by <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/partner-sites" target="_blank" rel="noopener">How Google Uses Data When You Use Our Partners' Apps</a>.</p>
+
+            <p><strong>b) Google User Messaging Platform (UMP / GDPR Consent)</strong></p>
+            <p>We use Google's UMP SDK to collect and manage advertising consent from users in regions that require it (EU/EEA, UK). This ensures compliance with GDPR and ePrivacy regulations before any personalized ads are served.</p>
+
+            <p><strong>c) Google ML Kit (Translation)</strong></p>
+            <p>We use ML Kit's on-device translation API to provide real-time translations. <strong>All translation processing happens locally on your device</strong>; no text is sent to external servers for translation.</p>
+
+            <p><strong>d) Android Speech Recognition</strong></p>
+            <p>The app uses the device's built-in speech recognition engine for pronunciation practice. Audio is processed by the device's local speech recognizer and <strong>is never recorded, stored, or transmitted by RusLex</strong>.</p>
+        </div>
+
+        <!-- 4. Permissions -->
+        <div class="policy-card">
+            <h2><span class="icon">🔐</span> 4. App Permissions &amp; Justification</h2>
+            <p>RusLex requests only the permissions strictly necessary for its features:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Permission</th>
+                        <th>Why It's Needed</th>
+                        <th>Data Leaves Device?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>INTERNET</strong></td>
+                        <td>Loading advertisements (AdMob) and checking for language database updates</td>
+                        <td>Yes — ad requests to Google servers</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ACCESS_NETWORK_STATE</strong></td>
+                        <td>Checking if internet is available before attempting to download updates</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECORD_AUDIO</strong> (Microphone)</td>
+                        <td>Enables speech recognition for Russian pronunciation practice. Requested at runtime with user consent.</td>
+                        <td><strong>No</strong> — all processing is on-device</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POST_NOTIFICATIONS</strong></td>
+                        <td>Optional daily reminders for vocabulary review (SRS). Requested at runtime with user consent.</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+                        <td>Re-schedules SRS review reminders after device reboot</td>
+                        <td>No</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AD_ID</strong></td>
+                        <td>Required by Google AdMob to serve and measure ad performance</td>
+                        <td>Yes — shared with Google AdMob</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <!-- 5. Data Storage & Security -->
+        <div class="policy-card">
+            <h2><span class="icon">🛡️</span> 5. Data Storage &amp; Security</h2>
+            <p>RusLex stores all user-generated data <strong>locally on your device</strong>:</p>
+            <ul>
+                <li><strong>Language database:</strong> Stored in a local SQLite database on your device</li>
+                <li><strong>Learning progress (SRS cards, streaks, reviews):</strong> Stored locally; never uploaded to any server</li>
+                <li><strong>App preferences (language, notification settings):</strong> Stored in local SharedPreferences</li>
+            </ul>
+            <p><strong>We do not operate any server or cloud storage.</strong> The only network communication from RusLex is:</p>
+            <ul>
+                <li>Outgoing ad requests to Google AdMob servers</li>
+                <li>Periodic checks for language database updates from a secure endpoint</li>
+            </ul>
+            <p>All network communication is encrypted using HTTPS/TLS.</p>
+        </div>
+
+        <!-- 6. Data Retention & Deletion -->
+        <div class="policy-card">
+            <h2><span class="icon">🗑️</span> 6. Data Retention &amp; Deletion</h2>
+            <p>Since RusLex does not create accounts or store data on servers, data retention is fully under your control:</p>
+            <ul>
+                <li><strong>To delete all app data:</strong> Go to <em>Android Settings → Apps → RusLex → Storage → Clear Data</em></li>
+                <li><strong>To uninstall:</strong> Uninstalling the app automatically removes all locally stored data</li>
+                <li><strong>To reset Advertising ID:</strong> Go to <em>Android Settings → Privacy → Ads → Reset advertising ID</em> or delete it entirely</li>
+                <li><strong>To opt out of personalized ads:</strong> Go to <em>Android Settings → Privacy → Ads → Opt out of Ads Personalization</em></li>
+            </ul>
+            <p>For data collected by Google AdMob, please refer to <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's data retention policies</a>.</p>
+        </div>
+
+        <!-- 7. AI Disclaimer -->
+        <div class="policy-card">
+            <h2><span class="icon">🤖</span> 7. AI-Generated Content Disclaimer</h2>
+            <p>RusLex uses Artificial Intelligence technology to generate translations, linguistic explanations, and educational content displayed within the app. While we strive for accuracy:</p>
+            <ul>
+                <li>AI-generated translations and explanations <strong>may contain inaccuracies or errors</strong></li>
+                <li>Content is provided <strong>"as is" for educational purposes only</strong> and should not be considered a substitute for professional language instruction</li>
+                <li>Users are encouraged to verify critical translations with qualified human translators</li>
+            </ul>
+            <p>This disclaimer is also displayed within the app interface.</p>
+        </div>
+
+        <!-- 8. Data Sources -->
+        <div class="policy-card">
+            <h2><span class="icon">📚</span> 8. Data Sources</h2>
+            <p>Our vocabulary and linguistic database is built using processed data from <strong>Russian Wikipedia dumps</strong>, which are publicly available under the Creative Commons Attribution-ShareAlike License. This data has been processed and adapted to provide a comprehensive Russian language learning experience.</p>
+        </div>
+
+        <!-- 9. Children -->
+        <div class="policy-card">
+            <h2><span class="icon">👶</span> 9. Children's Privacy</h2>
+            <p>RusLex is <strong>not directed at children under the age of 13</strong> (or the applicable age of digital consent in your jurisdiction).</p>
+            <ul>
+                <li>We do not knowingly collect personal information from children</li>
+                <li>The app does not participate in Google Play's "Designed for Families" program</li>
+                <li>Advertisements shown through AdMob are not targeted at children</li>
+            </ul>
+            <p>If you believe a child has provided us with personal data, please contact us and we will take steps to address the issue promptly.</p>
+        </div>
+
+        <!-- 10. Your Rights -->
+        <div class="policy-card">
+            <h2><span class="icon">⚖️</span> 10. Your Rights</h2>
+            <p>You have full control over your data in RusLex:</p>
+            <ul>
+                <li><strong>Right to Access:</strong> All your learning data is stored locally on your device and is directly accessible to you</li>
+                <li><strong>Right to Deletion:</strong> You can delete all data at any time by clearing app data or uninstalling</li>
+                <li><strong>Right to Opt Out of Ads:</strong> You can disable personalized ads through your device's settings</li>
+                <li><strong>Right to Notification Control:</strong> You can disable all notifications from the app's settings or Android notification settings</li>
+                <li><strong>Right to Microphone Control:</strong> You can revoke microphone permission at any time through Android settings; the app will continue to function without pronunciation features</li>
+            </ul>
+        </div>
+
+        <!-- 11. International -->
+        <div class="policy-card">
+            <h2><span class="icon">🌍</span> 11. International Users (GDPR / CCPA)</h2>
+            <p><strong>For users in the European Union / EEA / UK (GDPR):</strong></p>
+            <ul>
+                <li>We use Google's UMP SDK to obtain your consent before serving personalized ads</li>
+                <li>You may withdraw consent at any time through the consent dialog or device settings</li>
+                <li>The legal basis for ad-related data processing is your <strong>consent</strong> (Article 6(1)(a) GDPR)</li>
+                <li>Google Ireland Limited acts as the data controller for AdMob data in the EEA</li>
+            </ul>
+            <p><strong>For users in California (CCPA):</strong></p>
+            <ul>
+                <li>RusLex does not sell personal information</li>
+                <li>You have the right to know what data is collected and to request deletion</li>
+                <li>The Advertising ID shared with Google AdMob may be considered "selling" under CCPA — you can opt out via device settings</li>
+            </ul>
+        </div>
+
+        <!-- 12. Changes -->
+        <div class="policy-card">
+            <h2><span class="icon">📝</span> 12. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. When we do:</p>
+            <ul>
+                <li>The "Effective Date" at the top of this page will be updated</li>
+                <li>Material changes will be communicated through a notice within the app</li>
+                <li>Continued use of the app after changes constitutes acceptance of the updated policy</li>
+            </ul>
+        </div>
+
+        <!-- 13. Contact -->
+        <div class="policy-card">
+            <h2><span class="icon">📧</span> 13. Contact Us</h2>
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or your data, please contact us:</p>
+            <div class="contact-box">
+                <p><strong>Email:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+                <p><strong>Google Play:</strong> Through the app's listing page on Google Play Store</p>
+                <p>We will respond to all privacy-related inquiries within <strong>30 days</strong>.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                    ARABIC VERSION                          -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="lang-ar" class="lang-content rtl">
+
+        <div class="toc">
+            <h3>جدول المحتويات</h3>
+            <ol>
+                <li>معلومات المطور</li>
+                <li>البيانات التي نجمعها وكيفية استخدامها</li>
+                <li>الخدمات والمكتبات الخارجية</li>
+                <li>أذونات التطبيق ومبرراتها</li>
+                <li>تخزين البيانات وأمانها</li>
+                <li>الاحتفاظ بالبيانات وحذفها</li>
+                <li>إخلاء مسؤولية المحتوى المولّد بالذكاء الاصطناعي</li>
+                <li>مصادر البيانات</li>
+                <li>خصوصية الأطفال</li>
+                <li>حقوقك</li>
+                <li>المستخدمون الدوليون (GDPR / CCPA)</li>
+                <li>التغييرات على هذه السياسة</li>
+                <li>تواصل معنا</li>
+            </ol>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">👤</span> 1. معلومات المطور</h2>
+            <p><strong>اسم التطبيق:</strong> RusLex — مدرب اللغة الروسية</p>
+            <p><strong>المطور:</strong> حيدر</p>
+            <p><strong>البريد الإلكتروني:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+            <p><strong>المنصة:</strong> أندرويد (متجر Google Play)</p>
+            <p><strong>حزمة التطبيق:</strong> com.hayder.aiassistant.russianpronunciationtrainer</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📊</span> 2. البيانات التي نجمعها وكيفية استخدامها</h2>
+            <p>صُمم RusLex مع مراعاة الخصوصية. نقتصر في جمع البيانات على ما هو ضروري لعمل التطبيق فقط.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>نوع البيانات</th>
+                        <th>هل تُجمع؟</th>
+                        <th>هل تُشارك؟</th>
+                        <th>الغرض</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>معلومات شخصية (اسم، بريد، هاتف)</td>
+                        <td><strong>لا</strong></td>
+                        <td><strong>لا</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>بيانات الموقع الجغرافي</td>
+                        <td><strong>لا</strong></td>
+                        <td><strong>لا</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>الصوت / بيانات الكلام</td>
+                        <td>تُعالج على الجهاز فقط</td>
+                        <td><strong>لا</strong></td>
+                        <td>التعرف على النطق لتمارين اللفظ</td>
+                    </tr>
+                    <tr>
+                        <td>تقدم التعلم (بيانات SRS)</td>
+                        <td>تُخزن محلياً على الجهاز</td>
+                        <td><strong>لا</strong></td>
+                        <td>نظام التكرار المتباعد لمراجعة المفردات</td>
+                    </tr>
+                    <tr>
+                        <td>معرّف الإعلانات</td>
+                        <td>بواسطة Google AdMob SDK</td>
+                        <td>مع Google</td>
+                        <td>عرض إعلانات مناسبة</td>
+                    </tr>
+                    <tr>
+                        <td>تفاعلات الجهاز والتطبيق</td>
+                        <td>بواسطة Google AdMob SDK</td>
+                        <td>مع Google</td>
+                        <td>أداء الإعلانات والتحليلات ومنع الاحتيال</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notice">
+                <strong>مهم:</strong> لا يُنشئ RusLex حسابات مستخدمين. لا يتطلب التطبيق تسجيل دخول أو معلومات شخصية. جميع بيانات التعلم تبقى حصرياً على جهازك.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🔗</span> 3. الخدمات والمكتبات الخارجية</h2>
+            <p>يدمج RusLex الخدمات الخارجية التالية. قد تجمع كل منها بيانات وفقاً لسياسات الخصوصية الخاصة بها:</p>
+
+            <p><strong>أ) Google AdMob (الإعلانات)</strong></p>
+            <p>نستخدم Google AdMob لعرض إعلانات اختيارية بمكافآت. قد يجمع AdMob:</p>
+            <ul>
+                <li>معرّف الإعلانات (لتخصيص الإعلانات)</li>
+                <li>عنوان IP (للموقع التقريبي لاستهداف الإعلانات)</li>
+                <li>معلومات الجهاز (الطراز، نسخة النظام، حجم الشاشة)</li>
+                <li>بيانات التفاعل مع الإعلانات (المشاهدات، النقرات)</li>
+            </ul>
+            <p>تخضع ممارسات AdMob لـ<a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
+
+            <p><strong>ب) Google UMP (إدارة موافقة GDPR)</strong></p>
+            <p>نستخدم منصة رسائل المستخدم من Google لجمع وإدارة موافقة الإعلانات في المناطق التي تتطلب ذلك (الاتحاد الأوروبي / المملكة المتحدة).</p>
+
+            <p><strong>ج) Google ML Kit (الترجمة)</strong></p>
+            <p>نستخدم واجهة الترجمة المحلية من ML Kit. <strong>تتم جميع عمليات الترجمة محلياً على جهازك</strong>؛ لا تُرسل أي نصوص لخوادم خارجية.</p>
+
+            <p><strong>د) التعرف على الكلام من أندرويد</strong></p>
+            <p>يستخدم التطبيق محرك التعرف على الكلام المدمج في الجهاز. يُعالج الصوت محلياً <strong>ولا يُسجّل أو يُخزّن أو يُرسل بواسطة RusLex</strong>.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🔐</span> 4. أذونات التطبيق ومبرراتها</h2>
+            <p>يطلب RusLex الأذونات الضرورية لميزاته فقط:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>الإذن</th>
+                        <th>لماذا مطلوب</th>
+                        <th>هل تغادر البيانات الجهاز؟</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>INTERNET</strong></td>
+                        <td>تحميل الإعلانات والتحقق من تحديثات قاعدة البيانات اللغوية</td>
+                        <td>نعم — طلبات إعلانية لخوادم Google</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ACCESS_NETWORK_STATE</strong></td>
+                        <td>التحقق من توفر الإنترنت قبل محاولة التنزيل</td>
+                        <td>لا</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECORD_AUDIO</strong> (الميكروفون)</td>
+                        <td>التعرف على الكلام لتمارين النطق الروسي. يُطلب أثناء الاستخدام بموافقة المستخدم.</td>
+                        <td><strong>لا</strong> — المعالجة على الجهاز فقط</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POST_NOTIFICATIONS</strong></td>
+                        <td>تذكيرات اختيارية لمراجعة المفردات اليومية. تُطلب أثناء الاستخدام بموافقة المستخدم.</td>
+                        <td>لا</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+                        <td>إعادة جدولة تذكيرات المراجعة بعد إعادة تشغيل الجهاز</td>
+                        <td>لا</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AD_ID</strong></td>
+                        <td>مطلوب من Google AdMob لعرض وقياس أداء الإعلانات</td>
+                        <td>نعم — يُشارك مع Google AdMob</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🛡️</span> 5. تخزين البيانات وأمانها</h2>
+            <p>يخزن RusLex جميع البيانات المُنشأة من المستخدم <strong>محلياً على جهازك</strong>:</p>
+            <ul>
+                <li><strong>قاعدة البيانات اللغوية:</strong> مخزنة في قاعدة بيانات SQLite محلية</li>
+                <li><strong>تقدم التعلم (بطاقات SRS، السلاسل، المراجعات):</strong> مخزن محلياً ولا يُرفع لأي خادم</li>
+                <li><strong>تفضيلات التطبيق (اللغة، إعدادات الإشعارات):</strong> مخزنة في SharedPreferences المحلية</li>
+            </ul>
+            <p><strong>لا نملك أو نشغل أي خادم أو تخزين سحابي.</strong> الاتصال الشبكي الوحيد من RusLex هو:</p>
+            <ul>
+                <li>طلبات الإعلانات الصادرة لخوادم Google AdMob</li>
+                <li>فحص دوري لتحديثات قاعدة البيانات اللغوية من نقطة نهاية آمنة</li>
+            </ul>
+            <p>جميع الاتصالات الشبكية مشفرة باستخدام HTTPS/TLS.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🗑️</span> 6. الاحتفاظ بالبيانات وحذفها</h2>
+            <p>بما أن RusLex لا ينشئ حسابات ولا يخزن بيانات على خوادم، فالتحكم في البيانات بيدك بالكامل:</p>
+            <ul>
+                <li><strong>لحذف جميع بيانات التطبيق:</strong> انتقل إلى <em>إعدادات أندرويد ← التطبيقات ← RusLex ← التخزين ← مسح البيانات</em></li>
+                <li><strong>لإلغاء التثبيت:</strong> إزالة التطبيق تحذف تلقائياً جميع البيانات المخزنة محلياً</li>
+                <li><strong>لإعادة ضبط معرّف الإعلانات:</strong> انتقل إلى <em>إعدادات أندرويد ← الخصوصية ← الإعلانات ← إعادة ضبط معرّف الإعلانات</em></li>
+                <li><strong>لإلغاء تخصيص الإعلانات:</strong> انتقل إلى <em>إعدادات أندرويد ← الخصوصية ← الإعلانات ← إلغاء تخصيص الإعلانات</em></li>
+            </ul>
+            <p>بالنسبة للبيانات التي يجمعها Google AdMob، يُرجى مراجعة <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسات الاحتفاظ بالبيانات من Google</a>.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🤖</span> 7. إخلاء مسؤولية المحتوى المولّد بالذكاء الاصطناعي</h2>
+            <p>يستخدم RusLex تقنيات الذكاء الاصطناعي لتوليد الترجمات والشروحات اللغوية والمحتوى التعليمي المعروض داخل التطبيق. رغم سعينا للدقة:</p>
+            <ul>
+                <li>الترجمات والشروحات المولّدة بالذكاء الاصطناعي <strong>قد تحتوي على أخطاء أو عدم دقة</strong></li>
+                <li>يُقدم المحتوى <strong>"كما هو" لأغراض تعليمية فقط</strong> ولا يُعد بديلاً عن التعليم اللغوي المتخصص</li>
+                <li>ننصح المستخدمين بالتحقق من الترجمات الحرجة مع مترجمين محترفين</li>
+            </ul>
+            <p>يُعرض هذا الإخلاء أيضاً داخل واجهة التطبيق.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📚</span> 8. مصادر البيانات</h2>
+            <p>بُنيت قاعدة بياناتنا اللغوية باستخدام بيانات مُعالجة من <strong>تفريغات ويكيبيديا الروسية</strong>، المتاحة للعموم بموجب رخصة المشاع الإبداعي (Creative Commons Attribution-ShareAlike). تمت معالجة هذه البيانات وتكييفها لتوفير تجربة شاملة لتعلم اللغة الروسية.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">👶</span> 9. خصوصية الأطفال</h2>
+            <p>تطبيق RusLex <strong>غير موجه للأطفال دون سن 13 عاماً</strong> (أو السن القانوني للموافقة الرقمية في بلدك).</p>
+            <ul>
+                <li>لا نجمع عمداً معلومات شخصية من الأطفال</li>
+                <li>التطبيق لا يشارك في برنامج "مصمم للعائلات" من Google Play</li>
+                <li>الإعلانات المعروضة عبر AdMob ليست موجهة للأطفال</li>
+            </ul>
+            <p>إذا كنت تعتقد أن طفلاً قد زوّدنا ببيانات شخصية، يُرجى التواصل معنا وسنتخذ الإجراءات اللازمة فوراً.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">⚖️</span> 10. حقوقك</h2>
+            <p>لديك سيطرة كاملة على بياناتك في RusLex:</p>
+            <ul>
+                <li><strong>حق الوصول:</strong> جميع بيانات تعلمك مخزنة محلياً على جهازك ويمكنك الوصول إليها مباشرة</li>
+                <li><strong>حق الحذف:</strong> يمكنك حذف جميع البيانات في أي وقت بمسح بيانات التطبيق أو إلغاء تثبيته</li>
+                <li><strong>حق إلغاء تخصيص الإعلانات:</strong> يمكنك تعطيل الإعلانات المخصصة من إعدادات جهازك</li>
+                <li><strong>حق التحكم بالإشعارات:</strong> يمكنك تعطيل جميع الإشعارات من إعدادات التطبيق أو إعدادات أندرويد</li>
+                <li><strong>حق التحكم بالميكروفون:</strong> يمكنك سحب إذن الميكروفون في أي وقت من إعدادات أندرويد؛ سيستمر التطبيق بالعمل بدون ميزات النطق</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🌍</span> 11. المستخدمون الدوليون (GDPR / CCPA)</h2>
+            <p><strong>لمستخدمي الاتحاد الأوروبي / المنطقة الاقتصادية الأوروبية / المملكة المتحدة (GDPR):</strong></p>
+            <ul>
+                <li>نستخدم Google UMP SDK للحصول على موافقتك قبل عرض إعلانات مخصصة</li>
+                <li>يمكنك سحب الموافقة في أي وقت عبر حوار الموافقة أو إعدادات الجهاز</li>
+                <li>الأساس القانوني لمعالجة البيانات الإعلانية هو <strong>موافقتك</strong> (المادة 6(1)(أ) GDPR)</li>
+                <li>تعمل Google Ireland Limited كمتحكم في البيانات لبيانات AdMob في المنطقة الاقتصادية الأوروبية</li>
+            </ul>
+            <p><strong>لمستخدمي كاليفورنيا (CCPA):</strong></p>
+            <ul>
+                <li>لا يبيع RusLex المعلومات الشخصية</li>
+                <li>لديك الحق في معرفة البيانات المُجمعة وطلب حذفها</li>
+                <li>قد يُعتبر معرّف الإعلانات المُشارك مع Google AdMob "بيعاً" بموجب CCPA — يمكنك الإلغاء عبر إعدادات الجهاز</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📝</span> 12. التغييرات على هذه السياسة</h2>
+            <p>قد نقوم بتحديث سياسة الخصوصية هذه من وقت لآخر. عند التحديث:</p>
+            <ul>
+                <li>سيتم تحديث "تاريخ السريان" في أعلى هذه الصفحة</li>
+                <li>ستُبلّغ التغييرات الجوهرية عبر إشعار داخل التطبيق</li>
+                <li>يُعتبر استمرار استخدام التطبيق بعد التغييرات قبولاً للسياسة المُحدثة</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📧</span> 13. تواصل معنا</h2>
+            <p>إذا كانت لديك أي أسئلة أو استفسارات أو طلبات تتعلق بسياسة الخصوصية هذه أو بياناتك، يُرجى التواصل معنا:</p>
+            <div class="contact-box">
+                <p><strong>البريد الإلكتروني:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+                <p><strong>Google Play:</strong> عبر صفحة التطبيق في متجر Google Play</p>
+                <p>سنرد على جميع الاستفسارات المتعلقة بالخصوصية خلال <strong>30 يوماً</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <!--                    RUSSIAN VERSION                         -->
+    <!-- ═══════════════════════════════════════════════════════════ -->
+    <div id="lang-ru" class="lang-content">
+
+        <div class="toc">
+            <h3>Содержание</h3>
+            <ol>
+                <li>Информация о разработчике</li>
+                <li>Данные, которые мы собираем, и их использование</li>
+                <li>Сторонние сервисы и SDK</li>
+                <li>Разрешения приложения и их обоснование</li>
+                <li>Хранение и безопасность данных</li>
+                <li>Хранение и удаление данных</li>
+                <li>Отказ от ответственности за контент ИИ</li>
+                <li>Источники данных</li>
+                <li>Конфиденциальность детей</li>
+                <li>Ваши права</li>
+                <li>Международные пользователи (GDPR / CCPA)</li>
+                <li>Изменения в политике</li>
+                <li>Свяжитесь с нами</li>
+            </ol>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">👤</span> 1. Информация о разработчике</h2>
+            <p><strong>Название приложения:</strong> RusLex — Тренажёр русского языка</p>
+            <p><strong>Разработчик:</strong> Hayder</p>
+            <p><strong>Электронная почта:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+            <p><strong>Платформа:</strong> Android (Google Play Store)</p>
+            <p><strong>Пакет приложения:</strong> com.hayder.aiassistant.russianpronunciationtrainer</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📊</span> 2. Данные, которые мы собираем, и их использование</h2>
+            <p>RusLex разработан с учётом конфиденциальности. Мы собираем только те данные, которые необходимы для работы приложения.</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Тип данных</th>
+                        <th>Собирается?</th>
+                        <th>Передаётся?</th>
+                        <th>Цель</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Личная информация (имя, email, телефон)</td>
+                        <td><strong>Нет</strong></td>
+                        <td><strong>Нет</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Данные о местоположении</td>
+                        <td><strong>Нет</strong></td>
+                        <td><strong>Нет</strong></td>
+                        <td>—</td>
+                    </tr>
+                    <tr>
+                        <td>Аудио / голосовые данные</td>
+                        <td>Обрабатываются на устройстве</td>
+                        <td><strong>Нет</strong></td>
+                        <td>Распознавание речи для практики произношения</td>
+                    </tr>
+                    <tr>
+                        <td>Прогресс обучения (данные SRS)</td>
+                        <td>Хранится локально на устройстве</td>
+                        <td><strong>Нет</strong></td>
+                        <td>Система интервального повторения для повторения слов</td>
+                    </tr>
+                    <tr>
+                        <td>Рекламный идентификатор</td>
+                        <td>Через Google AdMob SDK</td>
+                        <td>С Google</td>
+                        <td>Показ релевантной рекламы</td>
+                    </tr>
+                    <tr>
+                        <td>Взаимодействия с устройством и приложением</td>
+                        <td>Через Google AdMob SDK</td>
+                        <td>С Google</td>
+                        <td>Эффективность рекламы, аналитика и предотвращение мошенничества</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <div class="notice">
+                <strong>Важно:</strong> RusLex не создаёт аккаунтов пользователей. Регистрация, вход или личная идентификация не требуются. Все данные обучения хранятся исключительно на вашем устройстве.
+            </div>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🔗</span> 3. Сторонние сервисы и SDK</h2>
+            <p>RusLex интегрирует следующие сторонние сервисы. Каждый из них может собирать данные в соответствии со своими политиками конфиденциальности:</p>
+
+            <p><strong>а) Google AdMob (Реклама)</strong></p>
+            <p>Мы используем Google AdMob для показа необязательной рекламы с вознаграждением. AdMob может собирать:</p>
+            <ul>
+                <li>Рекламный идентификатор (для персонализации рекламы)</li>
+                <li>IP-адрес (приблизительное местоположение для таргетинга)</li>
+                <li>Информация об устройстве (модель, версия ОС, размер экрана)</li>
+                <li>Данные взаимодействия с рекламой (показы, клики)</li>
+            </ul>
+            <p>Практики AdMob регулируются <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Политикой конфиденциальности Google</a>.</p>
+
+            <p><strong>б) Google UMP (Управление согласием GDPR)</strong></p>
+            <p>Мы используем Google UMP SDK для сбора и управления рекламным согласием в регионах, требующих этого (ЕС/ЕЭЗ, Великобритания).</p>
+
+            <p><strong>в) Google ML Kit (Перевод)</strong></p>
+            <p>Мы используем API локального перевода ML Kit. <strong>Вся обработка переводов происходит локально на вашем устройстве</strong>; никакие тексты не отправляются на внешние серверы.</p>
+
+            <p><strong>г) Распознавание речи Android</strong></p>
+            <p>Приложение использует встроенный движок распознавания речи устройства. Аудио обрабатывается локально <strong>и никогда не записывается, не сохраняется и не передаётся RusLex</strong>.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🔐</span> 4. Разрешения приложения и их обоснование</h2>
+            <p>RusLex запрашивает только разрешения, строго необходимые для его функций:</p>
+
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Разрешение</th>
+                        <th>Зачем необходимо</th>
+                        <th>Данные покидают устройство?</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>INTERNET</strong></td>
+                        <td>Загрузка рекламы и проверка обновлений языковой базы</td>
+                        <td>Да — рекламные запросы на серверы Google</td>
+                    </tr>
+                    <tr>
+                        <td><strong>ACCESS_NETWORK_STATE</strong></td>
+                        <td>Проверка доступности интернета перед загрузкой</td>
+                        <td>Нет</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECORD_AUDIO</strong> (Микрофон)</td>
+                        <td>Распознавание речи для практики русского произношения. Запрашивается во время использования с согласия пользователя.</td>
+                        <td><strong>Нет</strong> — обработка только на устройстве</td>
+                    </tr>
+                    <tr>
+                        <td><strong>POST_NOTIFICATIONS</strong></td>
+                        <td>Необязательные напоминания для ежедневного повторения слов. Запрашивается с согласия пользователя.</td>
+                        <td>Нет</td>
+                    </tr>
+                    <tr>
+                        <td><strong>RECEIVE_BOOT_COMPLETED</strong></td>
+                        <td>Перепланирование напоминаний после перезагрузки устройства</td>
+                        <td>Нет</td>
+                    </tr>
+                    <tr>
+                        <td><strong>AD_ID</strong></td>
+                        <td>Требуется Google AdMob для показа и измерения эффективности рекламы</td>
+                        <td>Да — передаётся Google AdMob</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🛡️</span> 5. Хранение и безопасность данных</h2>
+            <p>RusLex хранит все пользовательские данные <strong>локально на вашем устройстве</strong>:</p>
+            <ul>
+                <li><strong>Языковая база данных:</strong> хранится в локальной базе SQLite</li>
+                <li><strong>Прогресс обучения (карточки SRS, серии, обзоры):</strong> хранится локально; никогда не загружается на серверы</li>
+                <li><strong>Настройки приложения (язык, уведомления):</strong> хранятся в локальных SharedPreferences</li>
+            </ul>
+            <p><strong>Мы не имеем и не используем серверы или облачное хранилище.</strong> Единственная сетевая связь от RusLex:</p>
+            <ul>
+                <li>Исходящие рекламные запросы на серверы Google AdMob</li>
+                <li>Периодические проверки обновлений языковой базы из защищённой конечной точки</li>
+            </ul>
+            <p>Все сетевые соединения зашифрованы с использованием HTTPS/TLS.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🗑️</span> 6. Хранение и удаление данных</h2>
+            <p>Поскольку RusLex не создаёт аккаунтов и не хранит данные на серверах, контроль над данными полностью в ваших руках:</p>
+            <ul>
+                <li><strong>Удаление всех данных:</strong> <em>Настройки Android → Приложения → RusLex → Хранилище → Очистить данные</em></li>
+                <li><strong>Удаление приложения:</strong> автоматически удаляет все локальные данные</li>
+                <li><strong>Сброс рекламного ID:</strong> <em>Настройки Android → Конфиденциальность → Реклама → Сбросить рекламный идентификатор</em></li>
+                <li><strong>Отключение персонализации:</strong> <em>Настройки Android → Конфиденциальность → Реклама → Отключить персонализацию рекламы</em></li>
+            </ul>
+            <p>Для данных, собранных Google AdMob, обратитесь к <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">политикам хранения данных Google</a>.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🤖</span> 7. Отказ от ответственности за контент ИИ</h2>
+            <p>RusLex использует технологии Искусственного Интеллекта для генерации переводов, лингвистических объяснений и образовательного контента. Несмотря на стремление к точности:</p>
+            <ul>
+                <li>Переводы и объяснения, сгенерированные ИИ, <strong>могут содержать неточности или ошибки</strong></li>
+                <li>Контент предоставляется <strong>«как есть» исключительно в образовательных целях</strong> и не является заменой профессионального языкового обучения</li>
+                <li>Рекомендуем проверять важные переводы у квалифицированных переводчиков</li>
+            </ul>
+            <p>Данный отказ от ответственности также отображается в интерфейсе приложения.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📚</span> 8. Источники данных</h2>
+            <p>Наша лингвистическая база данных создана на основе обработанных данных <strong>дампов Русской Википедии</strong>, доступных по лицензии Creative Commons Attribution-ShareAlike. Данные обработаны и адаптированы для комплексного изучения русского языка.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">👶</span> 9. Конфиденциальность детей</h2>
+            <p>RusLex <strong>не предназначен для детей младше 13 лет</strong> (или применимого возраста цифрового согласия в вашей юрисдикции).</p>
+            <ul>
+                <li>Мы сознательно не собираем личную информацию детей</li>
+                <li>Приложение не участвует в программе Google Play «Для всей семьи»</li>
+                <li>Реклама через AdMob не нацелена на детей</li>
+            </ul>
+            <p>Если вы считаете, что ребёнок предоставил нам личные данные, свяжитесь с нами, и мы незамедлительно примем меры.</p>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">⚖️</span> 10. Ваши права</h2>
+            <p>Вы полностью контролируете свои данные в RusLex:</p>
+            <ul>
+                <li><strong>Право на доступ:</strong> все данные обучения хранятся локально и доступны вам напрямую</li>
+                <li><strong>Право на удаление:</strong> вы можете удалить все данные в любое время через очистку данных приложения или удаление</li>
+                <li><strong>Право отказа от рекламы:</strong> вы можете отключить персонализированную рекламу через настройки устройства</li>
+                <li><strong>Право управления уведомлениями:</strong> вы можете отключить все уведомления через настройки приложения или Android</li>
+                <li><strong>Право управления микрофоном:</strong> вы можете отозвать разрешение микрофона в любое время; приложение продолжит работу без функций произношения</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">🌍</span> 11. Международные пользователи (GDPR / CCPA)</h2>
+            <p><strong>Для пользователей ЕС / ЕЭЗ / Великобритании (GDPR):</strong></p>
+            <ul>
+                <li>Мы используем Google UMP SDK для получения вашего согласия перед показом персонализированной рекламы</li>
+                <li>Вы можете отозвать согласие в любое время через диалог согласия или настройки устройства</li>
+                <li>Правовая основа обработки рекламных данных — ваше <strong>согласие</strong> (статья 6(1)(a) GDPR)</li>
+                <li>Google Ireland Limited выступает контролёром данных для AdMob в ЕЭЗ</li>
+            </ul>
+            <p><strong>Для пользователей Калифорнии (CCPA):</strong></p>
+            <ul>
+                <li>RusLex не продаёт личную информацию</li>
+                <li>Вы имеете право знать, какие данные собираются, и запросить их удаление</li>
+                <li>Рекламный идентификатор, передаваемый Google AdMob, может считаться «продажей» по CCPA — вы можете отказаться через настройки устройства</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📝</span> 12. Изменения в политике</h2>
+            <p>Мы можем обновлять эту Политику конфиденциальности. При обновлении:</p>
+            <ul>
+                <li>«Дата вступления в силу» вверху страницы будет обновлена</li>
+                <li>О существенных изменениях будет сообщено уведомлением в приложении</li>
+                <li>Продолжение использования приложения после изменений означает принятие обновлённой политики</li>
+            </ul>
+        </div>
+
+        <div class="policy-card">
+            <h2><span class="icon">📧</span> 13. Свяжитесь с нами</h2>
+            <p>Если у вас есть вопросы или запросы относительно данной Политики конфиденциальности или ваших данных:</p>
+            <div class="contact-box">
+                <p><strong>Электронная почта:</strong> <a href="mailto:ruslexapp@gmail.com">ruslexapp@gmail.com</a></p>
+                <p><strong>Google Play:</strong> через страницу приложения в Google Play Store</p>
+                <p>Мы ответим на все запросы, связанные с конфиденциальностью, в течение <strong>30 дней</strong>.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>© 2026 RusLex — All Rights Reserved / جميع الحقوق محفوظة / Все права защищены</p>
+        <p style="margin-top:6px;">This policy is hosted at: <a href="https://sites.google.com/view/ruslex-privacy-policy" style="color:var(--accent);">https://sites.google.com/view/ruslex-privacy-policy</a></p>
+    </footer>
+</div>
+
+<script>
+function switchLang(lang) {
+    document.querySelectorAll('.lang-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.lang-btn').forEach(el => el.classList.remove('active'));
+    document.getElementById('lang-' + lang).classList.add('active');
+    event.target.classList.add('active');
+}
+</script>
+
+</body>
+</html>
