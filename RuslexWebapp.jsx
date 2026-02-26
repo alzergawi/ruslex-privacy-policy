@@ -6,7 +6,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 //  CONSTANTS
 // ══════════════════════════════════════════════════
 
-const PRIVACY_URL = "https://example.com/privacy";
+const PRIVACY_URL = "https://alzergawi.github.io/ruslex-privacy-policy/";
 
 // ══════════════════════════════════════════════════
 //  DATA
